@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd 
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similariy
+from sklearn.metrics.pairwise import cosine_similarity
 import matplotlib.pyplot as plt
 import seaborn as sns 
 
@@ -21,18 +21,18 @@ vectorizer = TfidfVectorizer(
     stop_words=None,
     ngram_range=(1,1),
     lowercase=True,
-    token_pattern=r'\b[a-zA-ZÀ-ÿ]\b'
+    token_pattern=r'\b[a-zA-ZÀ-ÿ]+\b'
 )
 
-tfidf_matrix = vectorizer.fit-transform(documentos)
+tfidf_matrix = vectorizer.fit_transform(documentos)
 
-feature_names = vectorizer.get_features_names_out()
+feature_names = vectorizer.get_feature_names_out()
 
 tfidf_dense = tfidf_matrix.toarray()
 
 df_tfidf = pd.DataFrame(
     tfidf_dense,
-    coluns=features_names,
+    columns=feature_names,
     index=labels
 )
 
