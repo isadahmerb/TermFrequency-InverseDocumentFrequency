@@ -18,7 +18,7 @@ labels = ['Python', 'ML', 'Análise', 'Deep Learning', 'Visualização', 'Pandas
 
 vectorizer = TfidfVectorizer(
     max_features=100,
-    stop_words=None,
+    stop_words=["uma", "é", "e", "para"],
     ngram_range=(1,1),
     lowercase=True,
     token_pattern=r'\b[a-zA-ZÀ-ÿ]+\b'
