@@ -8,4 +8,5 @@ A estrutura do programa segue as seguintes premissas:
 
 Essa estrutura simples é a base para muitos sistemas de recomendação.
 
-###A idea
+### TF-IDF
+A ideia é reconhecer como o TF-IDF dá nota alta para as palavras que aparecem muito em um documento específico (Term Frequency), mas em poucos documentos de toda a coleção (Inverse Document Frequency).
