@@ -63,3 +63,14 @@ sns.heatmap(
 plt.title('Similaridade de Cosseno entre Documentos em TF-IDF')
 plt.tight_layout()
 plt.show()
+
+def encontrar_similares(doc_index, top_n=2):
+    similarities = df_similarity.iloc[doc_index].sort_values(ascending=False)
+
+    similares = similarities[1:top_n+1]
+
+    print(f"Documentos mais similares a '{labels[doc_index]}':")
+    for doc, score in similares.items():
+        print(f" {doc}: {score:.4f}")
+    
+encontrar_similares(0)
