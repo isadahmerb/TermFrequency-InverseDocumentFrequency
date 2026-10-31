@@ -42,4 +42,24 @@ for i, doc_label in enumerate(labels):
     print(f"\n{doc_label}:")
     for palavra, score in top_scores.items():
         print(f" {palavra}: {score:.4f}")
-        
+
+similarity_matrix = cosine_similarity(tfidf_matrix)
+
+df_similarity = pd.DataFrame(
+    similarity_matrix,
+    index=labels,
+    columns=labels
+)
+
+plt.figure(figsize=(10,8))
+sns.heatmap(
+    df_similarity,
+    annot=True,
+    fmt='.3f',
+    cmap='coolwarm',
+    center=0,
+    square=True
+)
+plt.title('Similaridade de Cosseno entre Documentos em TF-IDF')
+plt.tight_layout()
+plt.show()
