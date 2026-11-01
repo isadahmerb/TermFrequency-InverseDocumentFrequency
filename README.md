@@ -53,4 +53,4 @@ Pandas:
  análise: 0.3721
  python: 0.3142
 
-![Texto alternativo](caminho/para/imagem.png)   
+![](Figure_1.png)   
